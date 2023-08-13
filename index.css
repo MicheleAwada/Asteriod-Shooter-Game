@@ -1,0 +1,86 @@
+body{
+    margin:0;
+    overflow: hidden;
+}
+p {
+    color:white;
+    font-family: space;
+    text-align: center;
+}
+#canvas {
+    z-index: 1;
+}
+#score{
+    position:relative;
+    right:50%;
+    padding:10px 20px 20px 20px;
+    border-radius: 0% 0% 25px 25px;
+    background-color: rgba(255,255,255,0.1);
+    z-index: 10000;
+    margin:0;
+}
+
+#scoreDiv{
+    position:absolute;
+    top:0;
+    left:50%;
+}
+
+@font-face {
+    font-family: "space";
+    src: url(./FFFFORWA.TTF) format('truetype');
+}
+
+#gameOverDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    position:absolute;
+    width:50%;
+    height: 50%;
+    right:50%;
+    bottom:50%;
+    transform: translate(50%, 50%);
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 1vmin;
+    z-index: -1;
+}
+
+#gameOver {
+    color: white;
+    z-index: 100;
+    font-family: space;
+    font-size: xx-large;
+}
+
+button {
+    height:10%;
+    width: 20%;
+    background-color: rgb(44,44,44);
+    color:rgb(243,243,243);
+    border-radius: 1.2vmin;
+    border: solid 1px white;
+    font-family: space;
+    font-size: 0.9em;
+    transition-property: all;
+    transition-duration: 250ms;
+}
+
+button:hover {
+    background-color: rgb(66,66,66);
+    color:white;
+    height:11%;
+    width: 22%;
+    font-size: 1em;
+    cursor:pointer;
+}
+
+@keyframes showDivDown {
+    from { top:-100%;}
+    to { top:0%; }
+}
+@keyframes hideDivDown {
+    from { top:0%;}
+    to { top:100%; }
+}
